@@ -18,7 +18,7 @@ NUM_EPOCHS = 20
 model = ResNet18()
     
 
-train_path=('work/train_val')
+train_path=('train_val')
 train_data = pd.read_csv("train_val.csv").values
 train_loader=Dataloader.Trainloader(train_data,train_path,BATCH_SIZE,shuffle=True)
 
