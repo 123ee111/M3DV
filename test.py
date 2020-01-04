@@ -7,7 +7,7 @@ from sklearn.externals import joblib
 
 model = joblib.load('saved_model.pkl')
 BATCH_SIZE=32
-test_path=('work/test')
+test_path=('test')
 test_name=pd.read_csv('sampleSubmission.csv').values
 test_loader=Dataloader.Testloader(test_name,test_path,BATCH_SIZE,shuffle=False)
 
