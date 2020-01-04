@@ -13,7 +13,7 @@ from sklearn.externals import joblib
 from Model import ResNet18
 
 BATCH_SIZE = 32
-NUM_EPOCHS = 20
+NUM_EPOCHS = 40
 
 model = ResNet18()
     
@@ -24,7 +24,7 @@ train_loader=Dataloader.Trainloader(train_data,train_path,BATCH_SIZE,shuffle=Tru
 
     
 loss_func = torch.nn.BCELoss()
-opt = torch.optim.Adam(model.parameters(), lr=0.001)
+opt = torch.optim.Adam(model.parameters(), lr=0.01)
 
 for epoch in range(NUM_EPOCHS):
     sum_loss = 0.0
